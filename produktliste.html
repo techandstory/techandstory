@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <script src="js/produktliste.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <!-- Skabelon til produkter -->
+    <template id="smallProductTemplate"><a href="produkt.html?">
+        <article>
+          <img src="" alt="">
+          <h3></h3>
+          <p class="subtle"></p>
+        </article>
+      </a>
+    </template>
+  </main>
+  <script src="js/produktliste.js"></script>
+</body>
+
 </html>
