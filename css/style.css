@@ -10,10 +10,6 @@ nav {
 justify-content: end;
 
 }
-a {
-    text-decoration: none;
-    color: black;
-}
 
 #forside {
     display: flex;
@@ -48,3 +44,12 @@ margin: 8px;
 #kategoriliste li a{
 font-size: x-large;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* a:hover{
+    color: aquamarine;
+} */
