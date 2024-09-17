@@ -1,109 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header>
-      <div>Logo</div>
-      <nav>
-        <div>Studiehåndboget</div>
-        <div>Vejleding og støtte</div>
-        <div>Praktik</div>
-        <div>Internationale muligheder</div>
-        <div>Studieliv og Faciliteter</div>
-      </nav>
-    </header>
-    <main>
-      <div id="forside">
-        <div>
-          <h1>Tech & Story Lab</h1>
-          <h3>
-            Tech & Story Lab er et lab med fokus på ny teknologi for KEAs
-            studerende, undervisere og øvrige ansatte. 
-          </h3>
-          <p>
-            I Tech & Story Lab kan du eksperimentere med ny teknologi og på egen
-            hånd lære at arbejde med forskelligt udstyr. Vi har alt lige fra
-            kameraer, mikrofoner og lysudstyr til VR-gear, AI-teknologier,
-            RaspberryPi’s og meget mere. Du kan låne et stort udvalg af udstyr
-            og få kyndig vejledning i brugen af det. 
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div>Logo</div>
+    <nav>
+      <div>Studiehåndboget</div>
+      <div>Vejleding og støtte</div>
+      <div>Praktik</div>
+      <div>Internationale muligheder</div>
+      <div>Studieliv og Faciliteter</div>
+    </nav>
+  </header>
+  <main>
+    <div id="forside">
+      <div>
+        <h1>Tech & Story Lab</h1>
+        <h3>
+          Tech & Story Lab er et lab med fokus på ny teknologi for KEAs
+          studerende, undervisere og øvrige ansatte. 
+        </h3>
+        <p>
+          I Tech & Story Lab kan du eksperimentere med ny teknologi og på egen
+          hånd lære at arbejde med forskelligt udstyr. Vi har alt lige fra
+          kameraer, mikrofoner og lysudstyr til VR-gear, AI-teknologier,
+          RaspberryPi’s og meget mere. Du kan låne et stort udvalg af udstyr
+          og få kyndig vejledning i brugen af det. 
+        </p>
+      </div>
+      <form>
+        <div class="mail">
+          <p>Mail</p>
+          <input type="email" name="Mail" placeholder="eksempel@mail.dk" />
         </div>
-        <form>
-          <div class="mail">
-            <p>Mail</p>
-            <input type="email" name="Mail" placeholder="eksempel@mail.dk" />
-          </div>
-          <div class="Spørgsmål">
-            <p>Hvad kan vi hjælpe med?</p>
-            <input
-              type="text"
-              name="Spørgsmål"
-              placeholder="Jeg skal tage billeder..."
-            />
-          </div>
-          <input id="send" type="submit" value="Send" />
-        </form>
-      </div>
-      <div id="udstyr">
-        <h2>Udstyr i Tech & Story Lab</h2>
-        <p>Her kan du få et overblik over vores forskellige typer udstyr.</p>
-      </div>
-      <ul id="kategoriliste">
-        <li>
-          <a href="produktliste.html?category=Audio%2FPhoto%2FVideo%20Equipment"
-            >Audio/Photo/Video Equipment</a
-          >
-        </li>
-        <li>
-          <a href="produktliste.html?category=Board%20Games">Board Games</a>
-        </li>
-        <li>
-          <a href="produktliste.html?category=Cables%20%26%20Connectors"
-            >Cables & Connectors</a
-          >
-        </li>
-        <li>
-          <a
-            href="produktliste.html?category=Computers%20%26%20Peripheral%20Devices"
-            >Computers & Peripheral Devices</a
-          >
-        </li>
-        <li>
-          <a href="produktliste.html?category=Electronic%20Visual%20Displays"
-            >Electronic Visual Displays</a
-          >
-        </li>
-        <li>
-          <a href="produktliste.html?category=Mobile%20Devices"
-            >Mobile Devices</a
-          >
-        </li>
-        <li>
-          <a
-            href="produktliste.html?category=Power%20Storage%20%26%20Power%20Adapters"
-            >Power Storage & Power Adapters</a
-          >
-        </li>
-        <li>
-          <a href="produktliste.html?category=Programmable%20Logic%20Devices"
-            >Progammable Logic Devices</a
-          >
-        </li>
-        <li>
-          <a
-            href="produktliste.html?category=Remote-controlled%20%26%20Robot%20Devices"
-            >Remote-controlled & Robot Devices</a
-          >
-        </li>
-      </ul>
-    </main>
-    <script src="js/index.js"></script>
-  </body>
+        <div class="Spørgsmål">
+          <p>Hvad kan vi hjælpe med?</p>
+          <input type="text" name="Spørgsmål" placeholder="Jeg skal tage billeder..." />
+        </div>
+        <input id="send" type="submit" value="Send" />
+      </form>
+    </div>
+    <div id="udstyr">
+      <h2>Udstyr i Tech & Story Lab</h2>
+      <p>Her kan du få et overblik over vores forskellige typer udstyr.</p>
+    </div>
+    <ul id="kategoriliste">
+      <li>
+        <a href="produktliste.html?category=Audio%2FPhoto%2FVideo%20Equipment">Audio/Photo/Video Equipment</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Board%20Games">Board Games</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Cables%20%26%20Connectors">
+          Se udstyr og ledighed
+        </a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Computers%20%26%20Peripheral%20Devices">Computers & Peripheral Devices</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Electronic%20Visual%20Displays">Electronic Visual Displays</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Mobile%20Devices">Mobile Devices</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Power%20Storage%20%26%20Power%20Adapters">Power Storage & Power Adapters</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Programmable%20Logic%20Devices">Progammable Logic Devices</a>
+      </li>
+      <li>
+        <a href="produktliste.html?category=Remote-controlled%20%26%20Robot%20Devices">Remote-controlled & Robot
+          Devices</a>
+      </li>
+    </ul>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
