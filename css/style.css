@@ -53,6 +53,16 @@ a {
     color: black;
 }
 
+li div {
+    display: flex;
+    flex-direction: column-reverse;
+    /* Dette vil ændre rækkefølgen */
+}
+
+li div img {
+width: 70%;
+}
+
 /* a:hover{
     color: aquamarine;
 } */
