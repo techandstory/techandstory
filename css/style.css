@@ -69,6 +69,13 @@ li div img {
 width: 70%;
 }
 
+#produktliste {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  margin: 25px;
+}
+
 /* a:hover{
     color: aquamarine;
 } */
