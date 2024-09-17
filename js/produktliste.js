@@ -3,7 +3,7 @@ const category = urlParams.get("category");
 const encoded = encodeURIComponent(category);
 console.log(category);
 
-fetch(`https://eitpzfzwqrjncnwgbuqg.supabase.co/rest/v1/techandstory?category=eq.${encoded}`, {
+fetch(`https://eitpzfzwqrjncnwgbuqg.supabase.co/rest/v1/techandstory?category=eq.${encoded}&limit=100`, {
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVpdHB6Znp3cXJqbmNud2didXFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjU5NjM0MDAsImV4cCI6MjA0MTUzOTQwMH0.8FkKbLapnt5g8peUsqds68gBza1mQ4Kbp0h5IjMngZo",
   },
@@ -28,8 +28,13 @@ function vis(data) {
   data.forEach((item) => {
     const template = document.querySelector("#smallProductTemplate").content;
     const copy = template.cloneNode(true);
+
     copy.querySelector("h3").textContent = item.produktnavn;
     copy.querySelector(".subtle").textContent = item.type;
+
+    const image = copy.querySelector("img");
+    image.alt = "image of " + item.produktnavn;
+    image.src = `img/${item.produktnavn}.webp`;
 
     document.querySelector("main").appendChild(copy);
   });
