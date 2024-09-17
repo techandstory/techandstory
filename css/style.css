@@ -10,6 +10,9 @@ nav {
 justify-content: end;
 
 }
+main {
+    margin: 25px;
+}
 
 #forside {
     display: flex;
