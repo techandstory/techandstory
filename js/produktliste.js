@@ -36,6 +36,11 @@ function vis(data) {
     image.alt = "image of " + item.produktnavn;
     image.src = `img/${item.produktnavn}.webp`;
 
+    // Tilføj en event listener for at håndtere fejl
+    image.onerror = () => {
+      image.src = "img/placeholder.webp";
+    };
+
     document.querySelector("main").appendChild(copy);
   });
 }
