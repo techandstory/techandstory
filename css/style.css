@@ -72,6 +72,82 @@ nav {
 
 #forside {
   display: flex;
+  margin: 50px;
+  padding: 50px;
+}
+
+#forside h1 {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+#forside h3 {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+#forside p {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+#udstyr {
+  margin: 50px;
+}
+
+#udstyr h2 {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+#udstyr p {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+#clickable:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
+  -moz-box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
+  box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
+}
+
+#clickable {
+  background-color: #e3e4e7;
+}
+
+#clickable p {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+}
+
+#clickable img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+#clickable {
+  margin-bottom: 20px; /* Add space between each clickable div */
+  margin-right: 20px;
 }
 
 form {
@@ -81,12 +157,67 @@ form {
   /* box-shadow: 10px 10px 60px rgb(233, 221, 218); */
   margin: 0px;
   padding: 15px;
+
   /* text-align: center; */
+}
+
+.mail,
+.Spørgsmål {
+  margin-left: 25px;
+}
+
+.mail p {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+}
+
+.Spørgsmål p {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  color: white;
+}
+
+form input[type="email"] {
+  height: 40px; /* Adjust height as needed */
+  padding: 30px; /* Add padding for better spacing */
+  border-color: white;
+  box-sizing: border-box; /* Include padding and border in the total width/height */
+  cursor: text;
+}
+
+form input[type="text"] {
+  height: 70px; /* Adjust height as needed */
+  padding: 30px; /* Add padding for better spacing */
+  border-color: white;
+  box-sizing: border-box; /* Include padding and border in the total width/height */
+  cursor: text;
 }
 
 #send {
   margin: 8px;
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: 25px;
+  background-color: #f04e98;
+  cursor: pointer;
+  padding: 2px 15px;
+  color: white;
+  border: #f04e98;
 }
+#send:hover {
+  transform: scale(1.05);
+  -webkit-box-shadow: 3px -1px 0px 3px rgba(223, 19, 112, 1);
+  -moz-box-shadow: 3px -1px 0px 3px rgba(223, 19, 112, 1);
+  box-shadow: 3px -1px 0px 3px rgba(223, 19, 112, 1);
+}
+
 /* .mail .spørgsmål {
     display: grid;
 } */
@@ -96,7 +227,6 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-
   list-style: none;
 }
 
@@ -107,13 +237,6 @@ form {
 a {
   text-decoration: none;
   color: black;
-}
-
-#clickable:hover {
-  transform: scale(1.05);
-  -webkit-box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
-  -moz-box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
-  box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
 }
 
 li div {
@@ -147,6 +270,9 @@ footer {
 
 footer h1 {
   font-size: large;
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
 }
 
 footer li {
@@ -154,6 +280,16 @@ footer li {
   margin: 5px;
   margin-left: -40px;
   font-size: medium;
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+footer p {
+  font-size: medium;
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 /* SINGLE VIEW SIDE */
@@ -290,6 +426,52 @@ box-shadow: 4px 4px 0 rgba(2, 0, 0, 2);
 
 .singleview div {
   margin-left: 5%;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu.show {
+    display: flex; /* Show menu when burger is clicked */
+  }
+
+  .burger {
+    display: flex; /* Show burger icon on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #forside {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #forside h1 {
+    font-size: 40px;
+  }
+
+  #forside h3 {
+    font-size: 24px;
+  }
+
+  #forside p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #kategoriliste {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
