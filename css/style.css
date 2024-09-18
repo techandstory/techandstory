@@ -120,14 +120,15 @@ nav {
 }
 
 #clickable:hover {
+  background-color: rgba(255, 180, 170, 1);
   transform: scale(1.05);
-  -webkit-box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
-  -moz-box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
-  box-shadow: 14px 14px 0px -3px rgba(209, 211, 215, 1);
+  -webkit-box-shadow: 14px 14px 0px -3px rgba(255, 135, 119, 1);
+  -moz-box-shadow: 14px 14px 0px -3px rgba(255, 135, 119, 1);
+  box-shadow: 14px 14px 0px -3px rgba(255, 135, 119, 1);
 }
 
 #clickable {
-  background-color: #e3e4e7;
+  background-color: rgba(255, 180, 170, 1);
 }
 
 #clickable p {
@@ -253,7 +254,42 @@ li div img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-  margin: 25px;
+  margin: 50px;
+}
+#produktliste a {
+  background-color: rgba(255, 180, 170, 1);
+  margin-bottom: 20px; /* Add space between each clickable div */
+  margin-right: 20px;
+}
+
+#produktliste h3 {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+#produktliste p {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+
+#produktliste a:hover {
+  background-color: rgba(255, 180, 170, 1);
+  transform: scale(1.05);
+  -webkit-box-shadow: 14px 14px 0px -3px rgba(255, 135, 119, 1);
+  -moz-box-shadow: 14px 14px 0px -3px rgba(255, 135, 119, 1);
+  box-shadow: 14px 14px 0px -3px rgba(255, 135, 119, 1);
+}
+
+#produktliste img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 /* a:hover{
@@ -470,6 +506,12 @@ box-shadow: 4px 4px 0 rgba(2, 0, 0, 2);
 
 @media (max-width: 768px) {
   #kategoriliste {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #produktliste {
     grid-template-columns: 1fr;
   }
 }
