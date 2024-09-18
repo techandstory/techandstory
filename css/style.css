@@ -1,14 +1,71 @@
 body {
   margin: 0;
 }
+/* Burger menu */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
   background-color: rgb(7, 98, 200);
-  padding: 2em;
 }
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
 nav {
   display: flex;
-  justify-content: end;
+  align-items: center;
 }
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: rgb(255, 180, 170);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu a:hover {
+  color: rgb(76, 55, 75);
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
 #main {
   margin: 25px;
 }
@@ -60,17 +117,17 @@ a {
 }
 
 li div {
-    display: flex;
-    flex-direction: column-reverse;
-    /* Dette vil ændre rækkefølgen */
+  display: flex;
+  flex-direction: column-reverse;
+  /* Dette vil ændre rækkefølgen */
 }
 
 li div img {
-width: 70%;
+  width: 70%;
 }
 
 #produktliste {
-    display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
   margin: 25px;
@@ -80,27 +137,24 @@ width: 70%;
     color: aquamarine;
 } */
 footer {
-    display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1em;
   padding: 25px;
-  background-color:  rgb(7, 98, 200);
+  background-color: rgb(7, 98, 200);
   color: rgb(234, 232, 232);
 }
 
 footer h1 {
-    font-size: large; 
+  font-size: large;
 }
 
 footer li {
-    list-style: none;
-    margin: 5px;
-    margin-left: -40px;
-    font-size: medium;
+  list-style: none;
+  margin: 5px;
+  margin-left: -40px;
+  font-size: medium;
 }
-
-
-
 
 /* SINGLE VIEW SIDE */
 
@@ -167,113 +221,153 @@ box-shadow: 4px 4px 0 rgba(2, 0, 0, 2);
             
         } */
 :root {
-    --font-family: Helvetica, sans-serif;
-    --font-weight-normal: 400;
-    --font-weight-light: 200;
-    --font-size-h3: 3rem;
-    --font-size-p: 1.5rem;
-    --font-size-button: 1.4rem;
-    --color-bg: rgb(255, 180, 170);
-    --color-button-bg: rgb(89, 203, 232);
-    --padding: 10px 20px;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    --box-shadow-hover: 4px 4px 0 rgba(2, 0, 0, 2);
+  --font-family: Helvetica, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-light: 200;
+  --font-size-h3: 3rem;
+  --font-size-p: 1.5rem;
+  --font-size-button: 1.4rem;
+  --color-bg: rgb(255, 180, 170);
+  --color-button-bg: rgb(89, 203, 232);
+  --padding: 10px 20px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --box-shadow-hover: 4px 4px 0 rgba(2, 0, 0, 2);
 }
 
 .singleh1 {
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-normal);
-    padding-left: 10%;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  padding-left: 10%;
 }
 
 .singleview {
-    display: grid;
-    grid-template-columns: 1.2fr 2fr;
-    margin: 5% 10% 10% 10%;
-    background-color: var(--color-bg);
-    padding: 1%;
-    box-shadow: var(--box-shadow);
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  margin: 5% 10% 10% 10%;
+  background-color: var(--color-bg);
+  padding: 1%;
+  box-shadow: var(--box-shadow);
 }
 
 .singleview h3 {
-    font-size: var(--font-size-h3);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
 }
 
 .singleview p {
-    font-size: var(--font-size-p);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-light);
+  font-size: var(--font-size-p);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-light);
 }
 
 #Button {
-    margin-left: 10%;
-    font-size: var(--font-size-button);
-    border-style: none;
-    background-color: var(--color-button-bg);
-    padding: var(--padding);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-normal);
-    transition: box-shadow 0.4s ease;
+  margin-left: 10%;
+  font-size: var(--font-size-button);
+  border-style: none;
+  background-color: var(--color-button-bg);
+  padding: var(--padding);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  transition: box-shadow 0.4s ease;
 }
 
-.singleview button
- {
-    margin-top: 7%;
-    font-size: var(--font-size-button);
-    border-style: none;
-    background-color: var(--color-button-bg);
-    padding: var(--padding);
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-normal);
-    transition: box-shadow 0.4s ease;
+.singleview button {
+  margin-top: 7%;
+  font-size: var(--font-size-button);
+  border-style: none;
+  background-color: var(--color-button-bg);
+  padding: var(--padding);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  transition: box-shadow 0.4s ease;
 }
 
 .singleview button:hover,
 #Button:hover {
-    box-shadow: var(--box-shadow-hover);
+  box-shadow: var(--box-shadow-hover);
 }
 
 .singleview div {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 @media (max-width: 768px) {
-    :root {
-        --font-size-h3: 2rem;
-        --font-size-p: 1rem;
-        --font-size-button: 1rem;
-        --padding: 8px 16px;
-    }
+  :root {
+    --font-size-h3: 2rem;
+    --font-size-p: 1rem;
+    --font-size-button: 1rem;
+    --padding: 8px 16px;
+  }
 
-    .singleh1 {
-        padding-left: 5%;
-    }
+  .singleh1 {
+    padding-left: 5%;
+  }
 
-    .singleview {
-        grid-template-columns: 1fr;
-        margin: 5% 5% 10% 5%;
-        padding: 2%;
-    }
+  .singleview {
+    grid-template-columns: 1fr;
+    margin: 5% 5% 10% 5%;
+    padding: 2%;
+  }
 
-    .singleview h3 {
-        font-size: var(--font-size-h3);
-    }
+  .singleview h3 {
+    font-size: var(--font-size-h3);
+  }
 
-    .singleview p {
-        font-size: var(--font-size-p);
-        margin: 0 auto;
-    }
+  .singleview p {
+    font-size: var(--font-size-p);
+    margin: 0 auto;
+  }
 
-    .singleview button,
-    #Button {
-        font-size: var(--font-size-button);
-    }
+  .singleview button,
+  #Button {
+    font-size: var(--font-size-button);
+  }
 
-   .singleview img {
-       margin: 0 auto;
-   }
+  .singleview img {
+    margin: 0 auto;
+  }
+
+  /* BURGER MENU MOBILE! */
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(63, 69, 59, 27);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
 }
 
 /* SINGLE VIEW SIDE */
