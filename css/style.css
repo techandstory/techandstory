@@ -66,10 +66,14 @@ nav {
   display: none;
 }
 
-#main {
-  margin: 30px;
-  padding: 30px;
-}
+@media (min-width: 768px) {
+  #main {
+      margin: 30px;
+      padding: 30px;
+    }
+  }
+  
+
 
 #forside h1 {
   font-family: roboto, sans-serif;
