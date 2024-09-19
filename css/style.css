@@ -67,20 +67,35 @@ nav {
 }
 
 #main {
-  margin: 25px;
-}
-
-#forside {
-  display: flex;
-  margin: 50px;
-  padding: 50px;
+  margin: 30px;
+  padding: 30px;
 }
 
 #forside h1 {
   font-family: roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 50px;
+  font-size: 60px;
+}
+
+#forside {
+  padding: 40px;
+}
+
+#forsidebox h2 {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.1;
+}
+
+#forsidebox h3 {
+  font-family: roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.1;
 }
 
 #forside h2 {
@@ -88,10 +103,11 @@ nav {
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: 1.1;
 }
 
-#forside p {
+#forside,
+#forsidebox p {
   font-family: roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -99,6 +115,23 @@ nav {
   text-align: justify;
   line-height: 1.7;
   overflow-wrap: break-word;
+}
+
+#forsidebox {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1em;
+  list-style: none;
+}
+
+.infobox {
+  background-color: rgba(255, 180, 170, 1);
+
+  padding: 30px;
+}
+
+.infotext {
+  padding: 50px;
 }
 
 #udstyr {
@@ -109,7 +142,7 @@ nav {
   font-family: roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 #udstyr p {
@@ -499,12 +532,34 @@ box-shadow: 4px 4px 0 rgba(2, 0, 0, 2);
     font-size: 40px;
   }
 
-  #forside h3 {
+  #forside h2 {
     font-size: 24px;
   }
 
   #forside p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #forsidebox {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 1em;
+  }
+
+  #forsidebox h2 {
+    font-size: 24px;
+  }
+
+  #forsidebox p {
+    font-size: 18px;
+  }
+
+  .infotext,
+  .infobox {
+    margin: 10px;
+    padding: 10px;
   }
 }
 
