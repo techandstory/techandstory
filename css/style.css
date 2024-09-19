@@ -586,6 +586,11 @@ box-shadow: 4px 4px 0 rgba(2, 0, 0, 2);
   nav.active .menu a {
     font-size: 24px;
   }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 /* SINGLE VIEW SIDE */
