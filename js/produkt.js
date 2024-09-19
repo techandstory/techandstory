@@ -17,16 +17,16 @@ function visProdukt(data) {
   if (data && data.length > 0) {
     const singleProduct = data[0];
     document.querySelector("h3").textContent = singleProduct.produktnavn;
-    const image = copy.querySelector("img");
-    image.alt = "image of " + item.produktnavn;
-    image.src = `img/${item.produktnavn}.webp`;
+    const image = document.querySelector(".produktimg");
+    image.alt = "image of " + singleProduct.produktnavn;
+    image.src = `img/${singleProduct.produktnavn}.webp`;
 
     // Tilføj en event listener for at håndtere fejl
     image.onerror = () => {
       image.src = "img/placeholder.webp";
     };
 
-    document.querySelector("p").textContent = "category" + singleProduct.type;
+    document.querySelector("p").textContent = "Dette produkt har ikke produktbeskrivelse af selve produktet inde på databasen, men hvis der var det skulle den være her:" + singleProduct.type;
   } else {
     console.error("No product found.");
   }

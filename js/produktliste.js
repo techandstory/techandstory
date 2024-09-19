@@ -31,6 +31,7 @@ function vis(data) {
 
     copy.querySelector("h3").textContent = item.produktnavn;
     copy.querySelector(".subtle").textContent = item.type;
+    copy.querySelector("a").href = `produkt.html?id=${item.id}`;
 
     const image = copy.querySelector("img");
     image.alt = "image of " + item.produktnavn;
