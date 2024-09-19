@@ -68,12 +68,10 @@ nav {
 
 @media (min-width: 768px) {
   #main {
-      margin: 30px;
-      padding: 30px;
-    }
+    margin: 30px;
+    padding: 30px;
   }
-  
-
+}
 
 #forside h1 {
   font-family: roboto, sans-serif;
@@ -498,7 +496,6 @@ box-shadow: 4px 4px 0 rgba(2, 0, 0, 2);
   nav {
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
   }
 
   .menu {
